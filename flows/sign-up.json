@@ -692,7 +692,6 @@
       }
     ]
   },
-  "references": {},
   "screens": [
     {
       "contents": {
@@ -782,50 +781,14 @@
           "type": {
             "resolvedName": "Container"
           }
-        },
-        "hLL454bn-h": {
-          "custom": {},
-          "displayName": "Text",
-          "hidden": false,
-          "isCanvas": false,
-          "linkedNodes": {},
-          "nodes": [],
-          "parent": "ROOT",
-          "props": {
-            "children": "We've sent a verification link to {{sentTo.maskedEmail}}",
-            "full-width": false,
-            "id": "hLL454bn-h",
-            "italic": false,
-            "mode": "primary",
-            "text-align": "center",
-            "variant": "subtitle1"
-          },
-          "type": {
-            "resolvedName": "Text"
-          }
-        },
-        "lpP_khmMrA": {
-          "custom": {
-            "type": "polling"
-          },
-          "displayName": "Polling",
-          "hidden": false,
-          "isCanvas": false,
-          "linkedNodes": {},
-          "nodes": [],
-          "parent": "ROOT",
-          "props": {
-            "color": "primary",
-            "data-type": "polling",
-            "id": "lpP_khmMrA",
-            "size": "md",
-            "variant": "linear"
-          },
-          "type": {
-            "resolvedName": "PollingLoader"
-          }
-        },
-        "resend": {
+        }
+      },
+      "interactions": [],
+      "screenId": "SC2ymvui0g8HlaUT5W89Fo53698PI"
+    },
+    {
+      "contents": {
+        "02Kl8WTFZ5": {
           "custom": {
             "subType": "social",
             "type": "button"
@@ -1334,64 +1297,10 @@
           "type": {
             "resolvedName": "Container"
           }
-        },
-        "SFhfbUwXin": {
-          "custom": {},
-          "displayName": "Error Message",
-          "hidden": false,
-          "isCanvas": false,
-          "linkedNodes": {},
-          "nodes": [],
-          "parent": "ROOT",
-          "props": {
-            "data-type": "error-message",
-            "full-width": false,
-            "id": "SFhfbUwXin",
-            "italic": false,
-            "mode": "error",
-            "text-align": "center",
-            "variant": "body1"
-          },
-          "type": {
-            "resolvedName": "ErrorMessage"
-          }
-        },
-        "resend": {
-          "custom": {
-            "type": "button"
-          },
-          "displayName": "Button",
-          "hidden": false,
-          "isCanvas": false,
-          "linkedNodes": {},
-          "nodes": [],
-          "parent": "KJo506s04p",
-          "props": {
-            "children": "Send again",
-            "data-type": "button",
-            "formNoValidate": false,
-            "full-width": true,
-            "id": "resend",
-            "mode": "primary",
-            "size": "sm",
-            "variant": "contained"
-          },
-          "type": {
-            "resolvedName": "Button"
-          }
         }
       },
-      "interactions": [
-        {
-          "id": "polling",
-          "label": "Polling"
-        },
-        {
-          "id": "resend",
-          "label": "Send again"
-        }
-      ],
-      "screenId": "SC2ybnabw6sjt6dGHniSvdXwyvpvI"
+      "interactions": [],
+      "screenId": "SC2ymvuihAejY70GXAp542Rvwz7GQ"
     },
     {
       "contents": {

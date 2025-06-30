@@ -42,36 +42,6 @@
               "resolvedName": "GoogleButton"
             }
           },
-          "38du2e5PtS": {
-            "custom": {
-              "subType": "social",
-              "type": "button"
-            },
-            "displayName": "Facebook Button",
-            "hidden": false,
-            "isCanvas": false,
-            "linkedNodes": {},
-            "nodes": [],
-            "parent": "zSbBTJOpe0",
-            "props": {
-              "aria-label": "Sign in with Facebook",
-              "children": "Sign in with Facebook",
-              "color": "primary",
-              "data-descope-provider": "facebook",
-              "data-type": "social",
-              "formNoValidate": true,
-              "full-width": true,
-              "id": "38du2e5PtS",
-              "size": "md",
-              "st-label-spacing": "10px",
-              "startIcon": "facebook",
-              "startIconColorText": false,
-              "variant": "outline"
-            },
-            "type": {
-              "resolvedName": "FacebookButton"
-            }
-          },
           "COcMh1vzSn": {
             "custom": {
               "type": "button"
@@ -96,37 +66,6 @@
             },
             "type": {
               "resolvedName": "Button"
-            }
-          },
-          "DrraM2J7Lf": {
-            "custom": {
-              "subType": "social",
-              "type": "button"
-            },
-            "displayName": "Apple Button",
-            "hidden": false,
-            "isCanvas": false,
-            "linkedNodes": {},
-            "nodes": [],
-            "parent": "zSbBTJOpe0",
-            "props": {
-              "aria-label": "Sign in with Apple",
-              "children": "Continue with Apple",
-              "color": "primary",
-              "data-descope-provider": "apple",
-              "data-type": "social",
-              "formNoValidate": true,
-              "full-width": true,
-              "id": "DrraM2J7Lf",
-              "shape": "",
-              "size": "md",
-              "st-label-spacing": "10px",
-              "startIcon": "apple",
-              "startIconColorText": false,
-              "variant": "outline"
-            },
-            "type": {
-              "resolvedName": "AppleButton"
             }
           },
           "F6duB0LsbH": {
@@ -277,7 +216,7 @@
             "nodes": [],
             "parent": "ROOT",
             "props": {
-              "children": "Welcome, Linktree User!\n\n",
+              "children": "Welcome!",
               "full-width": false,
               "id": "cDmtaSAoSF",
               "isEnriched": true,
@@ -418,8 +357,6 @@
             "linkedNodes": {},
             "nodes": [
               "058XUDlhFP",
-              "38du2e5PtS",
-              "DrraM2J7Lf",
               "gDYTgzMsxf"
             ],
             "parent": "ROOT",
@@ -465,23 +402,9 @@
             "type": "button"
           },
           {
-            "icon": "apple",
-            "id": "DrraM2J7Lf",
-            "label": "Continue with Apple",
-            "subType": "social",
-            "type": "button"
-          },
-          {
             "icon": "passkey",
             "id": "gDYTgzMsxf",
             "label": "Continue with Passkeys",
-            "type": "button"
-          },
-          {
-            "icon": "facebook",
-            "id": "38du2e5PtS",
-            "label": "Sign in with Facebook",
-            "subType": "social",
             "type": "button"
           }
         ],
@@ -498,14 +421,6 @@
             },
             {
               "interactionId": "058XUDlhFP",
-              "taskId": "35"
-            },
-            {
-              "interactionId": "DrraM2J7Lf",
-              "taskId": "35"
-            },
-            {
-              "interactionId": "38du2e5PtS",
               "taskId": "35"
             }
           ]
@@ -562,6 +477,12 @@
           "sentTo.maskedPhone"
         ],
         "id": "13",
+        "inputsMetadata": [
+          {
+            "displayName": "One Time Code",
+            "key": "code"
+          }
+        ],
         "name": "Verify OTP",
         "next": {
           "rules": [
@@ -645,7 +566,16 @@
         }
       },
       "16": {
+        "contextKeys": [
+          "inputs.phone"
+        ],
         "id": "16",
+        "inputsMetadata": [
+          {
+            "displayName": "Full Name Input",
+            "key": "fullName"
+          }
+        ],
         "name": "User Information",
         "next": {
           "rules": [
@@ -726,6 +656,7 @@
       },
       "21": {
         "id": "21",
+        "inputsMetadata": [],
         "name": "Promote Biometrics",
         "next": {
           "rules": [
@@ -958,7 +889,11 @@
         }
       },
       "25": {
+        "contextKeys": [
+          "sentTo.maskedEmail"
+        ],
         "id": "25",
+        "inputsMetadata": [],
         "name": "Magic Link Sent",
         "next": {
           "rules": [
@@ -985,6 +920,7 @@
       },
       "26": {
         "id": "26",
+        "inputsMetadata": [],
         "name": "Verified Successfully",
         "next": {},
         "screenId": "SC2ymvujPXXSgn101fJse6Rx4IxEq",
@@ -1017,6 +953,12 @@
           "sentTo.maskedPhone"
         ],
         "id": "28",
+        "inputsMetadata": [
+          {
+            "displayName": "One Time Code",
+            "key": "code"
+          }
+        ],
         "name": "Verify OTP",
         "next": {
           "rules": [
@@ -1224,7 +1166,11 @@
         }
       },
       "32": {
+        "contextKeys": [
+          "sentTo.maskedEmail"
+        ],
         "id": "32",
+        "inputsMetadata": [],
         "name": "Magic Link Sent",
         "next": {
           "rules": [
@@ -1247,6 +1193,7 @@
       },
       "33": {
         "id": "33",
+        "inputsMetadata": [],
         "name": "Verified Successfully",
         "next": {},
         "screenId": "SC2ymvukVAYLa8xMLu2YlfCUeHbmH",
@@ -1315,9 +1262,21 @@
             "type": "inline",
             "value": "35.end"
           },
+          "loginHint": {
+            "type": "inline",
+            "value": ""
+          },
+          "popup": {
+            "type": "inline",
+            "value": ""
+          },
           "prompt": {
             "type": "inline",
             "value": []
+          },
+          "rawResponse": {
+            "type": "inline",
+            "value": ""
           },
           "redirectUrl": {
             "type": "inline",
@@ -1427,7 +1386,7 @@
       "6": {
         "action": "logged-in",
         "id": "6",
-        "name": "Generate JWT",
+        "name": "End",
         "next": {},
         "type": "automated",
         "view": {
@@ -1439,6 +1398,16 @@
         "id": "7",
         "inputKeys": [
           "fullName"
+        ],
+        "inputsMetadata": [
+          {
+            "displayName": "Phone Input",
+            "key": "phone"
+          },
+          {
+            "displayName": "Full Name Input",
+            "key": "fullName"
+          }
         ],
         "name": "User Information - Unverified - Phone Only",
         "next": {
@@ -1475,7 +1444,7 @@
   },
   "flowId": "sign-up-or-in",
   "metadata": {
-    "componentsVersion": "2.0.547",
+    "componentsVersion": "2.0.557",
     "description": "Default Descope Sign Up or In flow; enables users to sign up or in via Magic Link, Social Logins or Biometrics. For Biometrics, Email is verified if needed. Registration information includes Full Name and Phone (verification via OTP).",
     "name": "Sign Up or In",
     "sharedInteractions": [
@@ -1485,7 +1454,6 @@
       }
     ]
   },
-  "references": {},
   "screens": [
     {
       "contents": {
@@ -2280,7 +2248,7 @@
         }
       },
       "interactions": [],
-      "screenId": "SC2ybnad9Jv9BjATNZytNmC3930nC"
+      "screenId": "SC2ymvujPXXSgn101fJse6Rx4IxEq"
     },
     {
       "contents": {
@@ -2323,10 +2291,61 @@
             "variant": "subtitle1"
           },
           "type": {
-            "resolvedName": "GoogleButton"
+            "resolvedName": "Text"
           }
         },
-        "38du2e5PtS": {
+        "PUZgvFyUAB": {
+          "custom": {},
+          "displayName": "Image",
+          "hidden": false,
+          "isCanvas": false,
+          "linkedNodes": {},
+          "nodes": [],
+          "parent": "ROOT",
+          "props": {
+            "alt": "Image",
+            "height": "50px",
+            "id": "PUZgvFyUAB",
+            "src": "https://imgs.descope.com/flows/common/v1/green-checkmark.png"
+          },
+          "type": {
+            "resolvedName": "Image"
+          }
+        },
+        "ROOT": {
+          "custom": {},
+          "displayName": "Container",
+          "hidden": false,
+          "isCanvas": true,
+          "linkedNodes": {},
+          "nodes": [
+            "PUZgvFyUAB",
+            "LmrSIGOWZb",
+            "1sMmkeVxVT"
+          ],
+          "props": {
+            "align": "center",
+            "background": "",
+            "data-editor-type": "container",
+            "direction": "column",
+            "id": "ROOT",
+            "justify": "center",
+            "paddingX": "4",
+            "paddingY": "8",
+            "spaceBetween": "4",
+            "width": "100%"
+          },
+          "type": {
+            "resolvedName": "Container"
+          }
+        }
+      },
+      "interactions": [],
+      "screenId": "SC2ymvukVAYLa8xMLu2YlfCUeHbmH"
+    },
+    {
+      "contents": {
+        "058XUDlhFP": {
           "custom": {
             "subType": "social",
             "type": "button"
@@ -2338,8 +2357,8 @@
           "nodes": [],
           "parent": "zSbBTJOpe0",
           "props": {
-            "aria-label": "Sign in with Facebook",
-            "children": "Sign in with Facebook",
+            "aria-label": "Sign in with Google",
+            "children": "Continue with Google",
             "color": "primary",
             "data-descope-provider": "google",
             "data-type": "social",
@@ -2383,37 +2402,6 @@
             "resolvedName": "Button"
           }
         },
-        "DrraM2J7Lf": {
-          "custom": {
-            "subType": "social",
-            "type": "button"
-          },
-          "displayName": "Apple Button",
-          "hidden": false,
-          "isCanvas": false,
-          "linkedNodes": {},
-          "nodes": [],
-          "parent": "zSbBTJOpe0",
-          "props": {
-            "aria-label": "Sign in with Apple",
-            "children": "Continue with Apple",
-            "color": "primary",
-            "data-descope-provider": "apple",
-            "data-type": "social",
-            "formNoValidate": true,
-            "full-width": true,
-            "id": "DrraM2J7Lf",
-            "shape": "",
-            "size": "md",
-            "st-label-spacing": "10px",
-            "startIcon": "apple",
-            "startIconColorText": false,
-            "variant": "outline"
-          },
-          "type": {
-            "resolvedName": "AppleButton"
-          }
-        },
         "F6duB0LsbH": {
           "custom": {},
           "displayName": "Text",
@@ -2451,6 +2439,7 @@
             "hide-when-empty": true,
             "id": "O6g57IzhQ9",
             "italic": false,
+            "link-target-blank": true,
             "mode": "error",
             "text-align": "center",
             "variant": "body1"
@@ -2609,6 +2598,7 @@
           "nodes": [],
           "parent": "zSbBTJOpe0",
           "props": {
+            "aria-label": "Sign in with passkey",
             "children": "Continue with Passkeys",
             "color": "primary",
             "data-type": "biometrics",
@@ -2701,8 +2691,6 @@
           "linkedNodes": {},
           "nodes": [
             "058XUDlhFP",
-            "38du2e5PtS",
-            "DrraM2J7Lf",
             "gDYTgzMsxf"
           ],
           "parent": "ROOT",
@@ -2729,30 +2717,18 @@
           "icon": "google",
           "id": "058XUDlhFP",
           "label": "Continue with Google",
-          "subType": "social"
+          "subType": "social",
+          "type": "button"
         },
         {
           "id": "COcMh1vzSn",
-          "label": "Continue"
-        },
-        {
-          "icon": "apple",
-          "id": "DrraM2J7Lf",
-          "label": "Continue with Apple",
-          "subType": "social",
+          "label": "Continue",
           "type": "button"
         },
         {
           "icon": "passkey",
           "id": "gDYTgzMsxf",
           "label": "Continue with Passkeys",
-          "type": "button"
-        },
-        {
-          "icon": "facebook",
-          "id": "38du2e5PtS",
-          "label": "Sign in with Facebook",
-          "subType": "social",
           "type": "button"
         }
       ],
