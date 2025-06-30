@@ -26,6 +26,13 @@ resource "descope_project" "project" {
         description = "Connector for Checking Password Breaches"
       }
     ],
+    "http": [
+      {
+        name        = "My Custom Connector"
+        description = "Custom HTTP Connector"
+        base_url    = "https://api.example.com"
+      }
+    ],
     "smtp": [
       {
         name = "Email Connector"
