@@ -4,7 +4,7 @@ provider "descope" {
 }
 
 resource "descope_project" "project" {
-  name = "Terraform Demo - PROD"
+  name = "terraform-mp"
   environment = "production"
 
   flows = {
